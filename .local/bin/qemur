@@ -1,0 +1,62 @@
+#!/bin/sh
+
+usage="Short for QEMU Run. Command line tool to run qemu-system-x86_64 without typing one giant command.
+    -h, -help       Show this help text
+    -a []           Provide host CPU architecture
+    -k              Enable KVM
+    -f []           Provide .img file
+"
+while getopts 'helpk' option; do # Check args
+    case "$option" in
+        [hH]|[-help]) echo "$usage"
+        exit
+        ;;
+        [k]) kvm="y"
+        ;;
+    esac
+done
+
+echo "Please type your host system's CPU architecture and the script will attempt to pair it with a command"
+read -rp "Host CPU architecture [x86_64]: " act # Variable name is short for architecture.
+case "$act" in
+    [64][86_64]|[x64][x86_64]) command=/usr/bin/qemu-system-x86_64 # Use a command such as "which qemu-system-x86_64" to find these paths.
+    ;;
+    *) echo "Invalid architecture."
+    exit 2
+    ;;
+esac
+
+run_final_cmd() {
+    comb="$command $kvm-boot menu=on $img"
+    echo "Running '$comb'"
+    $comb
+}
+
+if [ -f $command ] # Run a command to check and make sure that the specified command exists
+then
+    if [ !$kvm ]
+    then
+        read -rp "Enable KVM? [y/N]: " kvm
+        case "$kvm" in
+            [yY][eE][sS]|[yY]) kvm="-enable-kvm "
+            ;;
+            *) kvm=
+            ;;
+        esac
+    fi
+
+    if [ !$img ]
+    then
+        read -r img
+        if [ $img ]
+        then
+            run_final_cmd
+        else
+            echo "Cannot run command if no Virtual Disk Image is provided."
+            exit 99
+        fi
+    fi
+else
+    echo "Could not find $command command -- you likely dont have the specified version of QEMU installed! Make sure that the specified command is installed and working."
+    exit 98
+fi

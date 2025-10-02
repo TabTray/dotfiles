@@ -1,0 +1,26 @@
+#!/bin/sh
+
+usage="Script to easily make Virtual Disk Images for use with QEMU. Makes Virtual Disk Images for use in QEMU.
+    -h, -help       Show this help text
+"
+command=/usr/bin/qemu-img
+if [ -f $command ] # Check and make sure that the specified command exists on the system
+then
+    echo "Please type the name of the Virtual Disk Image you would like to create, including .img at the end."
+    echo "File will be called 'untitled.img' if left blank."
+    read -r filename
+    echo "Please type the file type of the Virtual Disk Image you would like to create."
+    echo "Uses qcow2 if left blank."
+    read -r filetype
+    echo "Making file '$filename' with file type '$filetype'"
+    read -rp "Is this correct? [y/N]: " cfirm
+    case "$cfirm" in
+        [yY][eE][sS]|[yY]) kvm="-enable-kvm "
+        ;;
+        *) exit
+        ;;
+    esac
+else
+    echo "Could not find $command command. Make sure that the latest version of QEMU is installed and if the command exists outside of this script."
+    exit 1
+fi

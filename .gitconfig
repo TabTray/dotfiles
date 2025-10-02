@@ -1,0 +1,7 @@
+[include]
+	path = ./.gitconfig.local
+[user]
+	name = TabTray
+	email = tabtrayinquire@gmail.com
+[init]
+	defaultBranch = master

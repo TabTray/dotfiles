@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "alias mkqvd='qemu-img create -f qcow2'"
+# mkqvd [filename.img] [size eg. '128G' for Gigabytes]
+echo "alias qemu='qemu-system-x86_64 -enable-kvm -m 8G -drive'"
+# qemu file=[filename.img] [-cdrom FedoraWorkstation.iso]
