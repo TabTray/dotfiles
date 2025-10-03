@@ -27,9 +27,9 @@ stow -D <REPO_DIRECTORY_LOCATION>
 
 ### kde plasma settings
 
-there are many configs that are not included in this repo, such as kde settings. the reasoning for this is that kde plasma config files can allegedly vary by distro, so ive chosen to be better safe than sorry.
+there are many configs that are not included in this repo, such as kde settings. the reasoning for kde in particular is that kde plasma config files can allegedly vary by distro, and also i have no idea where to even start with kde's config files, so ive chosen to be better safe than sorry.
 
-i'll also probably switch off of kde plasma entirely anyway once i get hyprland configured - timeframe is roughly before the sun explodes. at least, that's until something (inevitably) breaks on hyprland.
+i'll also probably switch off of kde plasma entirely anyway once i get hyprland fully configured - timeframe is roughly before the sun explodes. at least, that's until something (inevitably) breaks on hyprland.
 
 thus, kde settings must be manually set again.
 
@@ -53,4 +53,10 @@ when inactive = sleep after 60 min/1 hour
 auto dim = 10 min
 turn off screen = 15 min | when locked = 2 min
 
-there are probably more settings that i forgot i changed but those can be re-set as i go, these were (probably) the most important ones.
+there are definitely more settings that i forgot i changed
+
+## hyprland theming
+
+initially my hyprland's entire theme was based around firefox's alpenglow/radiance theme(s), but i realized like 20 minutes ago that "actually these colors kinda look like oneshot" so its based off of oneshot now.
+
+also in a shweet twist of fate, the browser i use, floorp, also appears to use radiance for some of its icon colors!
