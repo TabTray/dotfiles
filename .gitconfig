@@ -1,5 +1,7 @@
 [include]
 	path = ./.gitconfig.local
+[core]
+	editor = vim # i feel so sigma!
 [user]
 	name = TabTray
 	email = tabtrayinquire@gmail.com
