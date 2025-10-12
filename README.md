@@ -55,8 +55,12 @@ turn off screen = 15 min | when locked = 2 min
 
 there are definitely more settings that i forgot i changed
 
-## hyprland theming
+## footnotes
 
 initially my hyprland's entire theme was based around firefox's alpenglow/radiance theme(s), but i realized like 20 minutes ago that "actually these colors kinda look like oneshot" so its based off of oneshot now.
 
 also in a shweet twist of fate, the browser i use, floorp, also appears to use radiance for some of its icon colors!
+
+## vencord/vesktop?
+
+whenever i tried to add my vesktop plugin settings to these dotfiles, it would break my ability to change those settings. idk why, but since thats the case, they arent included anymore and vesktop settings will need to be set manually.
