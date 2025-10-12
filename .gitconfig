@@ -5,3 +5,5 @@
 	email = tabtrayinquire@gmail.com
 [init]
 	defaultBranch = master
+[pull]
+	rebase = false
