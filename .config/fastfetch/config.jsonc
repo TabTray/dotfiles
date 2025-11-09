@@ -18,7 +18,7 @@
     "height": null,
     "padding": {
       "top": 0,
-      "left": 0,
+      "left": 2,
       "right": 4
     },
     "printRemaining": true,
@@ -36,11 +36,11 @@
     "showErrors": false,
     "disableLinewrap": true,
     "hideCursor": false,
-    "separator": ": ",
+    "separator": " ~ ",
     "color": {
       "keys": "",
       "title": "",
-      "output": "",
+      "output": "#FFFFFF",
       "separator": ""
     },
     "brightColor": true,
@@ -120,104 +120,45 @@
   },
   "modules": [
     {
-      "type": "title",
-      "key": " ",
-      "keyIcon": "",
-      "fqdn": false,
-      "color": {
-        "user": "",
-        "at": "",
-        "host": ""
-      }
-    },
-    {
-      "type": "separator",
-      "string": "-",
-      "outputColor": "",
-      "times": 0
-    },
-    {
       "type": "os",
-      "keyIcon": ""
+      "key": ""
     },
     {
       "type": "host",
-      "keyIcon": "󰌢"
+      "key": "├󰌢"
     },
     {
       "type": "kernel",
-      "keyIcon": ""
-    },
-    {
-      "type": "uptime",
-      "keyIcon": ""
+      "key": "├"
     },
     {
       "type": "packages",
-      "keyIcon": "󰏖",
+      "key": "├󰏖",
       "disabled": [
         "winget"
       ],
       "combined": false
     },
     {
-      "type": "shell",
-      "keyIcon": ""
+      "type": "uptime",
+      "key": "├⏻"
     },
     {
       "type": "display",
-      "keyIcon": "󰍹",
+      "key": "󰍹",
       "compactType": "none",
       "preciseRefreshRate": false,
       "order": "desc"
     },
     {
-      "type": "de",
-      "keyIcon": "",
-      "slowVersionDetection": false
-    },
-    {
-      "type": "wm",
-      "keyIcon": "",
-      "detectPlugin": false
-    },
-    {
-      "type": "wmtheme",
-      "keyIcon": "󰓸"
-    },
-    {
-      "type": "theme",
-      "keyIcon": "󰉼"
-    },
-    {
-      "type": "icons",
-      "keyIcon": ""
-    },
-    {
-      "type": "font",
-      "keyIcon": ""
-    },
-    {
-      "type": "cursor",
-      "keyIcon": "󰆿"
-    },
-    {
-      "type": "terminal",
-      "keyIcon": ""
-    },
-    {
-      "type": "terminalfont",
-      "keyIcon": ""
-    },
-    {
       "type": "cpu",
-      "keyIcon": "",
+      "key": "├",
       "temp": false,
       "showPeCoreCount": false
     },
     {
       "type": "gpu",
-      "keyIcon": "󰾲",
+      "key": "├󰾲",
       "driverSpecific": false,
       "detectionMethod": "pci",
       "temp": false,
@@ -230,7 +171,7 @@
     },
     {
       "type": "memory",
-      "keyIcon": "",
+      "key": "├",
       "percent": {
         "green": 50,
         "yellow": 80,
@@ -238,53 +179,50 @@
       }
     },
     {
-      "type": "swap",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
-      "keyIcon": "󰓡",
-      "separate": false
+      "type": "de",
+      "key": "🖽",
+      "slowVersionDetection": false
     },
     {
-      "type": "disk",
-      "keyIcon": "",
-      "showRegular": true,
-      "showExternal": true,
-      "showHidden": false,
-      "showSubvolumes": false,
-      "showReadOnly": true,
-      "showUnknown": false,
-      "folders": "",
-      "hideFolders": "/efi:/boot:/boot/efi:/boot/firmware",
-      "hideFS": "",
-      "useAvailable": false,
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      }
+      "type": "wm",
+      "key": "├",
+      "detectPlugin": false
     },
     {
-      "type": "localip",
-      "keyIcon": "󰩟",
-      "showIpv4": true,
-      "showIpv6": false,
-      "showMac": false,
-      "showLoop": false,
-      "showPrefixLen": true,
-      "showMtu": false,
-      "showSpeed": false,
-      "showFlags": false,
-      "compact": false,
-      "defaultRouteOnly": true,
-      "showAllIps": false,
-      "namePrefix": ""
+      "type": "wmtheme",
+      "key": "├󰓸"
+    },
+    {
+      "type": "theme",
+      "key": "├󰉼"
+    },
+    {
+      "type": "icons",
+      "key": "├"
+    },
+    {
+      "type": "font",
+      "key": "├"
+    },
+    {
+      "type": "cursor",
+      "key": "├󰆿"
+    },
+    {
+      "type": "terminal",
+      "key": ""
+    },
+    {
+      "type": "shell",
+      "key": "├"
+    },
+    {
+      "type": "terminalfont",
+      "key": "├"
     },
     {
       "type": "battery",
-      "keyIcon": "",
+      "key": "",
       "temp": false,
       "percent": {
         "green": 50,
@@ -294,18 +232,13 @@
     },
     {
       "type": "poweradapter",
-      "keyIcon": "󰚥"
-    },
-    {
-      "type": "locale",
-      "keyIcon": ""
+      "key": "󰚥"
     },
     "break",
     {
       "type": "colors",
       "key": " ",
-      "keyIcon": "",
-      "symbol": "block",
+      "symbol": "circle",
       "paddingLeft": 0,
       "block": {
         "width": 3,

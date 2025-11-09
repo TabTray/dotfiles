@@ -96,6 +96,13 @@ button:hover {
     text-shadow: #2b2b2b 0 2px 3px;
 }
 
+.modules-left,
+.modules-right {
+    margin: 0 4px 4px 4px;
+    background-color: rgba(0, 0, 0, 11);
+    border: rgba(59, 59, 59, 99) 2px solid;
+}
+
 #window,
 #workspaces {
     margin: 0 4px;
@@ -112,7 +119,7 @@ button:hover {
 }
 
 #clock {
-    text-shadow: #000000 10px 10px 10px;
+    text-shadow: #000000 4px 4px 4px;
 }
 
 #battery {
@@ -237,7 +244,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background: 0;
 }
 
 #tray > .passive {
@@ -249,9 +256,8 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#idle_inhibitor {
+#idle_inhibitor:hover {
     background-color: #2d3436;
-    border-radius: 1000px;
 }
 
 #idle_inhibitor.activated {

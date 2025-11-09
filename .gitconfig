@@ -1,5 +1,5 @@
 [core]
-	editor = vim # i feel so sigma!
+	editor = helix # i feel so sigma!
 [user]
 	name = TabTray
 	email = tabtrayinquire@gmail.com
