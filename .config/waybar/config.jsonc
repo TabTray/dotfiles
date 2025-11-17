@@ -10,7 +10,7 @@
         "memory"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/submap"
     ],
     "modules-right": [
         "tray",

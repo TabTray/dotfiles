@@ -1,4 +1,7 @@
 #!/bin/sh
+# an experimental tui-based qemu toolkit
+# alongside mkqvdui in this same directory, this is intended for unexperienced users to easily make and run virtual machines with qemu
+# these arent being actively developed anymore, as aliases of normal qemu commands work more than fine enough for me
 
 usage="Short for QEMU Run. Command line tool to run qemu-system-x86_64 without typing one giant command.
     -h, -help       Show this help text

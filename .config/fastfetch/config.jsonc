@@ -33,10 +33,10 @@
   "display": {
     "stat": false,
     "pipe": false,
-    "showErrors": false,
+    "showErrors": true,
     "disableLinewrap": true,
     "hideCursor": false,
-    "separator": " ~ ",
+    "separator": " ",
     "color": {
       "keys": "",
       "title": "",
@@ -99,10 +99,8 @@
     "fraction": {
       "ndigits": 2
     },
-    "noBuffer": false,
     "key": {
-      "width": 0,
-      "type": "string",
+      "width": 8,
       "paddingLeft": 0
     },
     "freq": {
@@ -115,25 +113,29 @@
     "thread": true,
     "processingTimeout": 5000,
     "detectVersion": true,
-    "playerName": "",
     "dsForceDrm": false
   },
   "modules": [
     {
+      "type": "version",
+      "key": " ",
+      "format": "{#1;36}┍━━━━━ {project-name} {build-type} {version} ━━━───┄┄{#}"
+    },
+    {
       "type": "os",
-      "key": ""
+      "key": " OPER"
     },
     {
       "type": "host",
-      "key": "├󰌢"
+      "key": "┆ ├ 󰌢 "
     },
     {
       "type": "kernel",
-      "key": "├"
+      "key": "┆ ├  "
     },
     {
       "type": "packages",
-      "key": "├󰏖",
+      "key": "┆ ├ 󰏖 ",
       "disabled": [
         "winget"
       ],
@@ -141,24 +143,24 @@
     },
     {
       "type": "uptime",
-      "key": "├⏻"
+      "key": "┆ └ ⏻ "
     },
     {
       "type": "display",
-      "key": "󰍹",
+      "key": "󰍹 HARD",
       "compactType": "none",
       "preciseRefreshRate": false,
       "order": "desc"
     },
     {
       "type": "cpu",
-      "key": "├",
+      "key": "┆ ├  ",
       "temp": false,
       "showPeCoreCount": false
     },
     {
       "type": "gpu",
-      "key": "├󰾲",
+      "key": "┆ ├ 󰾲 ",
       "driverSpecific": false,
       "detectionMethod": "pci",
       "temp": false,
@@ -171,7 +173,7 @@
     },
     {
       "type": "memory",
-      "key": "├",
+      "key": "┆ └  ",
       "percent": {
         "green": 50,
         "yellow": 80,
@@ -180,49 +182,49 @@
     },
     {
       "type": "de",
-      "key": "🖽",
+      "key": "🖽 ENVM",
       "slowVersionDetection": false
     },
     {
       "type": "wm",
-      "key": "├",
+      "key": "┆ ├  ",
       "detectPlugin": false
     },
     {
       "type": "wmtheme",
-      "key": "├󰓸"
+      "key": "┆ ├ 󰓸 "
     },
     {
       "type": "theme",
-      "key": "├󰉼"
+      "key": "┆ ├ 󰉼 "
     },
     {
       "type": "icons",
-      "key": "├"
+      "key": "┆ ├  "
     },
     {
       "type": "font",
-      "key": "├"
+      "key": "┆ ├  "
     },
     {
       "type": "cursor",
-      "key": "├󰆿"
+      "key": "┆ └ 󰆿 "
     },
     {
       "type": "terminal",
-      "key": ""
+      "key": " TERM"
     },
     {
       "type": "shell",
-      "key": "├"
+      "key": "┆ ├  "
     },
     {
       "type": "terminalfont",
-      "key": "├"
+      "key": "┆ └  "
     },
     {
       "type": "battery",
-      "key": "",
+      "key": " BATT",
       "temp": false,
       "percent": {
         "green": 50,
@@ -232,9 +234,12 @@
     },
     {
       "type": "poweradapter",
-      "key": "󰚥"
+      "key": "┆ └ 󰚥 "
     },
-    "break",
+    {
+      "type": "custom",
+      "format": "{#1;36}┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━───┄┄{#}" // its not great how this can be misaligned if the version text at the top is one character longer or shorter... but how in the world would i fix that in this format.
+    },
     {
       "type": "colors",
       "key": " ",
