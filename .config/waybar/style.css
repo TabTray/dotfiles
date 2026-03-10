@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background: none;
-    /* border-top: 3px solid rgba(100, 114, 125, 0.5); */ 
+    background-color: #222222;
+    border-top: 3px solid rgba(100, 114, 125, 0); 
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -94,13 +94,6 @@ button:hover {
     font-weight: bold;
     color: #ffffff;
     text-shadow: #2b2b2b 0 2px 3px;
-}
-
-.modules-left,
-.modules-right {
-    margin: 0 4px 4px 4px;
-    background-color: rgba(0, 0, 0, 11);
-    border: rgba(59, 59, 59, 99) 2px solid;
 }
 
 #window,

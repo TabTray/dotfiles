@@ -1,5 +1,5 @@
 configuration {
-	modes: "combi,ssh,keys";
+	modes: "drun,ssh,keys";
 	combi-modes: "drun,run";
 //	window mode might be cool for a minimal hyprland setup, if it worked
 	font: "Noto-Sans-Mono 14";

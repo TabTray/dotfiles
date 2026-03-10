@@ -182,8 +182,7 @@
     },
     {
       "type": "de",
-      "key": "🖽 ENVM",
-      "slowVersionDetection": false
+      "key": "🖽 ENVM"
     },
     {
       "type": "wm",

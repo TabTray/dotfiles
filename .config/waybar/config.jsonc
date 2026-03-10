@@ -6,11 +6,11 @@
     // "width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
     "modules-left": [
-        "custom/media", // might make a deadbeef waybar plugin sometime, now that i know this exists
-        "memory"
+        "custom/media",
+        "hyprland/submap"
     ],
     "modules-center": [
-        "hyprland/submap"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
@@ -104,7 +104,10 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%I:%M}",
+        "format": "{:%a, %b %e %I:%M}",
+        // i want to have a word with the person who wrote the man page for waybar-clock
+        // use this format for the format (chrono)
+        // https://omegaup.com/docs/cpp/en/cpp/chrono/format.html
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -161,7 +164,7 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{essid} on {ifname}: {ipaddr}/{cidr}"
