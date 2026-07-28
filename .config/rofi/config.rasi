@@ -12,20 +12,19 @@ configuration {
 /*	on-menu-canceled: ;*/
 /*	on-menu-error: ;*/
 /*	on-screenshot-taken: ;*/
-	terminal: "kitty";
+	terminal: "foot";
 /*	icon-theme: ;*/
-/*	drun-match-fields: "name,generic,exec,categories,keywords";*/
+	drun-match-fields: "name,exec";
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
 	drun-show-actions: true;
-//	probably wouldnt be enabled if it werent for sober
-//	TODO: make them tree-style actions in the theme, if possible
+//	TODO: make drun-show-actions appear in a tree-style in the theme, if possible
 	drun-display-format: "{name} \n[<span weight='light' size='small'><i>({generic})</i></span>]";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
-/*	sorting-method: "normal";*/
+	sort: false;
+	sorting-method: "fzf";
 /*	case-sensitive: false;*/
 /*	case-smart: false;*/
 	cycle: false;
@@ -48,14 +47,11 @@ configuration {
 	combi-hide-mode-prefix: true;
 /*	combi-display-format: "{mode} {text}";*/
 /*	matching-negate-char: '-' /* unsupported */;*/
-/*	cache-dir: ;*/
-/*	window-thumbnail: false;*/
 /*	drun-use-desktop-cache: false;*/
 /*	drun-reload-desktop-cache: false;*/
 	normalize-match: true;
 /*	application-fallback-icon: ;*/
 /*	refilter-timeout-limit: 300;*/
-/*	xserver-i300-workaround: false;*/
 /*	completer-mode: "filebrowser";*/
 /*	imdkit: true;*/
 	display-window: "Running";

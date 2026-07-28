@@ -1,7 +1,7 @@
 # TabTray's .files
-my Linux configuration files, uploaded to GitHub for distrohopping purposes
+my Linux configuration files, uploaded to GitHub for whenever i (or hyprland) inevitably mess something up
 
-contains configurations for sway, hyprland, waybar, kitty, fastfetch, rofi, and btop
+contains configurations for niri, hyprland, sway, waybar, kitty, rofi, fastfetch, and btop
 
 ## walkthrough
 
@@ -33,22 +33,15 @@ there are many configs that are not included in this repo, such as kde settings.
 
 thus, kde settings must be manually set again.
 
-i'll also probably switch off of kde plasma entirely anyway once i get hyprland or some other wm fully configured - timeframe is roughly after the sun explodes.
+i'll also probably switch off of kde plasma entirely anyway once i get niri or some other wm fully configured - timeframe is roughly after the sun explodes.
 
-key repeat (same as hyprland, thankfully):
-delay = 350ms
-rate = 30/s
+libinput keyboard:
+repeat_delay = 350ms
+repeat_rate = 30/s
 
 mouse:
 pointer speed = 0.20
 scrolling speed = center notch idk man
-
-display:
-brightness = 45%
-
-screen locking:
-auto lock = 5 min
-auto lock passwd delay = 5s
 
 power management:
 when inactive = sleep after 60 min/1 hour

@@ -2,25 +2,24 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 38, // Waybar height (to be removed for auto height)
+    "height": 42, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
+    "reload_style_on_change": true,
+    "layer": "top",
     "modules-left": [
-        "custom/media",
-        "hyprland/submap"
+        "hyprland/submap",
+        "mpd"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/window",
+        "sway/workspaces"
     ],
     "modules-right": [
         "tray",
-        "mpd",
         "idle_inhibitor",
         "pulseaudio",
-        "network",
-        "temperature",
         "backlight",
-        "keyboard-state",
         "battery",
         "battery#bat2",
         "clock"
@@ -30,62 +29,44 @@
         "disable-scroll": false,
         "all-outputs": true,
         "warp-on-scroll": true,
-        // "format": "{name}. {icon}",
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
             "urgent": "",
             "focused": "",
-            "default": ""
+            "default": "",
+            "empty": "",
+            "1": "α",
+            "2": "β",
+            "3": "γ",
+            "4": "δ",
+            "5": "ε",
+            "6": "Ϛ",
+            "7": "ζ",
+            "8": "η",
+            "9": "θ",
+            "10": "ι"
         }
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format": "{stateIcon} {artist} - {title}",
+        "format-disconnected": "Silence. Introspection.",
+        "format-stopped": "MPD Stopped",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
             "on": " "
         },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
         "state-icons": {
             "paused": "",
-            "playing": ""
+            "playing": "",
+            "repeat": " ",
+            "single": "1 ",
+            "random": " "
         },
         "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "tooltip-format-disconnected": "MPD (disconnected)",
+        "on-click": "mpc toggle",
+        "on-click-right": "mpc next"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -104,12 +85,12 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%a, %b %e %I:%M}",
+        "format": "{:%I:%M %p}",
         // i want to have a word with the person who wrote the man page for waybar-clock
         // use this format for the format (chrono)
         // https://omegaup.com/docs/cpp/en/cpp/chrono/format.html
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%m/%d/%y}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -117,14 +98,6 @@
     },
     "memory": {
         "format": " {used} GiB"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -149,25 +122,14 @@
     "battery#bat2": {
         "bat": "BAT2"
     },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname}",
+        "format-ethernet": "",
+        "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{essid} on {ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname} at {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -187,30 +149,6 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/power": {
-        "format" : "⏻ ",
-        "tooltip": true,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-        "menu-actions": {
-            "shutdown": "shutdown",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
     }
 }
 

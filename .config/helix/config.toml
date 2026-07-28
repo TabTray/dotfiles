@@ -1,0 +1,21 @@
+theme = "focus_nova"
+# focus nova and truth roaring enjoyers when truth nova walks in
+#
+# favorite builtin helix themes: focus_nova, nyxvamp-obsidian, sonokai - flatwhite for light mode
+# if i am ever to make my own theme comments HAVE to be a color that isnt gray good god
+
+[editor.cursor-shape]
+# hot tip: if anyone reading this dislikes modal text editors, you should try editing the configs so that each mode has a distinct cursor shape/color. it seriously helped me get past the ever-present "wait shit that was normal mode" problem
+insert = "underline"
+# thank you, most mid editor to live (zed) for making me discover my love for underline cursors
+# this may or may not be entirely true, but it was definitely the first program outside of windows terminal to show me the underline cursor
+normal = "block"
+select = "bar"
+# foo cursor fans when bar cursor fans walk in
+# i should stop making that joke
+
+[editor.soft-wrap]
+enable = true
+
+[editor.indent-guides]
+render = true

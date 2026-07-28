@@ -1,12 +1,15 @@
+@define-color button-border #5a4244;
+@define-color button-fill #4a3340;
+@define-color button-hover #6a5355;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-family: FontAwesome, NotoSans, Arial, sans-serif;
+    font-size: 15px;
 }
 
 window#waybar {
-    background-color: #222222;
-    border-top: 3px solid rgba(100, 114, 125, 0); 
+    background: linear-gradient(to bottom, rgb(45, 28, 45), rgb(30, 22, 22));
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -16,51 +19,31 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each button name */
     border: none;
-    border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
+    background: @button-hover;
     background: inherit;
     box-shadow: inset 0 -3px #ff99c0;
 }
 
 #workspaces button {
     padding: 0 14px;
-    background-color: transparent;
-    color: #ffffff;
+    background: @button-fill;
+    color: #DDDDDD;
+    border-radius: 100px;
+    border: 2px solid #6a5355;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: @button-hover;
 }
 
 #workspaces button.focused, #workspaces button.active {
-    background: linear-gradient(to bottom, rgba(202, 93, 166, 0.2), rgba(255, 189, 202, 0.6));
-    box-shadow: inset 0 -3px #ff99c0;
+    background: linear-gradient(to bottom, rgba(202, 93, 166, 1), rgba(255, 189, 202, 1));
 }
 
 #workspaces button.urgent {
@@ -89,16 +72,12 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 8px;
-    font-size: 15px;
-    font-weight: bold;
+    padding: 2px 8px;
+    min-width: 30px;
     color: #ffffff;
-    text-shadow: #2b2b2b 0 2px 3px;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
+    border-radius: 10px;
+    border: 2px solid @button-border;
+    background: @button-fill;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -111,13 +90,8 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    text-shadow: #000000 4px 4px 4px;
-}
-
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
@@ -167,21 +141,19 @@ label:focus {
 }
 
 #cpu {
-    font-weight: bold;
     color: #2ecc71;
 }
 
 #memory {
-    font-weight: bold;
     color: #dd86ff;
 }
 
 #disk {
-    background-color: #964B00;
+    color: #964B00;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    color: #90b1b1;
 }
 
 #network {
@@ -214,20 +186,6 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
 #temperature {
     background-color: #f0932b;
 }
@@ -238,6 +196,7 @@ label:focus {
 
 #tray {
     background: 0;
+    border: none;
 }
 
 #tray > .passive {
@@ -249,8 +208,11 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#idle_inhibitor:hover {
-    background-color: #2d3436;
+#idle_inhibitor:hover,
+#clock:hover,
+#mpd:hover,
+#network:hover {
+    background-color: @button-hover;
 }
 
 #idle_inhibitor.activated {
@@ -259,36 +221,19 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    color: #66dd99;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    color: #f53c3c;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    color: #90b1b1;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
+    color: #dddddd;
 }
 
 #keyboard-state > label {
@@ -297,14 +242,6 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
 }
 
 #privacy {

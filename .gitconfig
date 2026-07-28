@@ -1,5 +1,5 @@
 [core]
-	editor = helix # i feel so sigma!
+	editor = helix
 [user]
 	name = TabTray
 	email = tabtrayinquire@gmail.com
@@ -7,3 +7,9 @@
 	defaultBranch = master
 [pull]
 	rebase = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+# i didnt add this lfs stuff but if its what the build.sh wants then its what the build.sh gets

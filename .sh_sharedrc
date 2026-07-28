@@ -18,4 +18,12 @@ alias qemu='qemu-system-x86_64 -enable-kvm -m 8G -drive'
 # qemu file=<filename> [-cdrom iso]
 # filename: the location of the virtual disk you would like to start from 
 # iso: an iso file, not a variable/option
-alias love='/home/tabtray/AppImages/löve.appimage'
+
+# appimages
+
+alias love='~/AppImages/löve.appimage'
+alias r2modman='~/AppImages/r2modman-3.2.15.appimage'
+
+# environment
+
+export WINEPREFIX=~/.local/share/wineprefixes/wine
