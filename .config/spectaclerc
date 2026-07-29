@@ -1,0 +1,19 @@
+[Annotations]
+annotationToolType=7
+rectangleStrokeColor=0,0,0,0
+rectangleStrokeWidth=0
+
+[General]
+autoSaveImage=true
+clipboardGroup=PostScreenshotCopyImage
+
+[ImageSave]
+imageFilenameTemplate=<yyyy>-<MM>-<dd> <HH>-<mm>-<ss>
+lastImageSaveAsLocation=file:///home/tabtray/Pictures/Screenshots/2026-07-28 13-19-57.png
+lastImageSaveLocation=file:///home/tabtray/Pictures/Screenshots/2026-07-29 04-26-17.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts
+videoFilenameTemplate=<yyyy>-<MM>-<dd> <HH>-<mm>-<ss>
+videoSaveLocation=file:///home/tabtray/Videos/Recordings/Spectacle/
