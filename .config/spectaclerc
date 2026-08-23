@@ -1,5 +1,6 @@
 [Annotations]
-annotationToolType=7
+annotationToolType=3
+freehandStrokeWidth=2
 rectangleStrokeColor=0,0,0,0
 rectangleStrokeWidth=0
 
@@ -10,7 +11,7 @@ clipboardGroup=PostScreenshotCopyImage
 [ImageSave]
 imageFilenameTemplate=<yyyy>-<MM>-<dd> <HH>-<mm>-<ss>
 lastImageSaveAsLocation=file:///home/tabtray/Pictures/Screenshots/2026-07-28 13-19-57.png
-lastImageSaveLocation=file:///home/tabtray/Pictures/Screenshots/2026-07-29 04-26-17.png
+lastImageSaveLocation=file:///home/tabtray/Pictures/Screenshots/2026-08-20 20-04-30.png
 translatedScreenshotsFolder=Screenshots
 
 [VideoSave]
