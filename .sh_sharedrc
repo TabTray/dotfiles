@@ -2,12 +2,14 @@
 # to include in a *shrc:
 # source ~/.sh_aliases
 
+# environment
+
+export WINEPREFIX=~/.local/share/wineprefixes/wine
+
 alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias {btw,fetch}='fastfetch'
 # because i use arch, btw - one of the aliases is btw. btw.
-alias {vencord,vencore,vendicate}='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
-# aliased because vencord on regular discord breaks often and its really annoying to have to go to the website and copy the command and allat.
 alias mkqvd='qemu-img create -f qcow2'
 # usage - also see https://www.youtube.com/watch?v=AAfFewePE7c
 # mkqvd <file_name> <disk_size>
@@ -21,9 +23,5 @@ alias qemu='qemu-system-x86_64 -enable-kvm -m 8G -drive'
 
 # appimages
 
-alias love='~/AppImages/löve.appimage'
-alias r2modman='~/AppImages/r2modman-3.2.15.appimage'
-
-# environment
-
-export WINEPREFIX=~/.local/share/wineprefixes/wine
+alias love='~/.local/bin/appimages/löve.appimage'
+alias r2modman='~/.local/bin/appimages/r2modman-3.2.15.appimage'
