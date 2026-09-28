@@ -1,59 +1,33 @@
 configuration {
 	modes: "drun,ssh,keys";
-	combi-modes: "drun,run";
-//	window mode might be cool for a minimal hyprland setup, if it worked
 	font: "Noto-Sans-Mono 14";
+	fixed-num-lines: true;
 	show-icons: true;
-/*	fixed-num-lines: true;*/
-/*	preview-cmd: ;*/
-/*	on-selection-changed: ;*/
-/*	on-mode-changed: ;*/
-/*	on-entry-accepted: ;*/
-/*	on-menu-canceled: ;*/
-/*	on-menu-error: ;*/
-/*	on-screenshot-taken: ;*/
 	terminal: "foot";
 /*	icon-theme: ;*/
-	drun-match-fields: "name,exec";
-/*	drun-categories: ;*/
-/*	drun-exclude-categories: ;*/
+	combi-modes: "drun,run";
+	combi-hide-mode-prefix: true;
+/*	combi-display-format: "{mode} {text}";*/
+	drun-match-fields: "name";
 	drun-show-actions: true;
 //	TODO: make drun-show-actions appear in a tree-style in the theme, if possible
 	drun-display-format: "{name} \n[<span weight='light' size='small'><i>({generic})</i></span>]";
 /*	drun-url-launcher: "xdg-open";*/
-/*	disable-history: false;*/
-/*	ignored-prefixes: "";*/
+	disable-history: true;
 	sort: false;
 	sorting-method: "fzf";
-/*	case-sensitive: false;*/
-/*	case-smart: false;*/
+	matching: "prefix";
+	case-sensitive: false;
+	case-smart: false;
 	cycle: false;
 	sidebar-mode: true;
 	eh: 2;
-/*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-/*	combi-modes: "window,run";*/
-/*	matching: "normal";*/
-/*	tokenize: true;*/
-/*	m: "-5";*/
-/*	filter: ;*/
-/*	dpi: -1;*/
-/*	scroll-method: 0;*/
-/*	window-format: "{w}    {c}   {t}";*/
-/*	click-to-exit: true;*/
-/*	global-kb: false;*/
-/*	max-history-size: 25;*/
-	combi-hide-mode-prefix: true;
-/*	combi-display-format: "{mode} {text}";*/
-/*	matching-negate-char: '-' /* unsupported */;*/
-/*	drun-use-desktop-cache: false;*/
-/*	drun-reload-desktop-cache: false;*/
+	scroll-method: 0;
+	click-to-exit: true;
+	global-kb: true;
 	normalize-match: true;
-/*	application-fallback-icon: ;*/
-/*	refilter-timeout-limit: 300;*/
-/*	completer-mode: "filebrowser";*/
-/*	imdkit: true;*/
 	display-window: "Running";
 	display-run: "Commands";
 	display-ssh: "ssh";
@@ -62,10 +36,12 @@ configuration {
 	display-keys: "Keybinds";
 	display-filebrowser: "File Browser";
 	display-recursivebrowser: "Recursive File Browser";
+
 /* keybinds */
-/* view "keys" mode for more options */ 
+
 	me-select-entry: "MouseSecondary";
 	me-accept-entry: "MousePrimary";
+
   timeout {
       action: "kb-cancel";
       delay:  0;

@@ -214,7 +214,7 @@ layout {
 spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "waybar"
 // Use spawn-sh-at-startup for background processes that run in sh.
-spawn-sh-at-startup "swaybg -i /home/tabtray/Wallpapers/oneshot-worldmachine-catwalks.png -m fit"
+spawn-sh-at-startup "swaybg -i '/home/tabtray/.local/share/wallpapers/OneShot: World Machine Edition - Catwalks.png' -m fit"
 spawn-at-startup "dunst"
 
 hotkey-overlay {
