@@ -1,5 +1,5 @@
 # TabTray's .files
-my Linux configuration files, put into a GitHub repository for whenever i inevitably mess something up
+my Linux configuration files, shoved into a git repository for whenever i inevitably mess something up and need to look back on my decisions
 
 contains config files for:
 
