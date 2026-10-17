@@ -19,7 +19,6 @@
         "tray",
         "idle_inhibitor",
         "pulseaudio",
-        "backlight",
         "battery",
         "battery#bat2",
         "clock"
