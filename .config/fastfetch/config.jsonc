@@ -178,17 +178,13 @@
       }
     },
     {
-      "type": "de",
-      "key": "🖽 ENVM"
-    },
-    {
       "type": "wm",
-      "key": "┆ ├  ",
+      "key": "🖽 ENVM",
       "detectPlugin": false
     },
     {
-      "type": "wmtheme",
-      "key": "┆ ├ 󰓸 "
+      "type": "de",
+      "key": "┆ ├  "
     },
     {
       "type": "theme",
