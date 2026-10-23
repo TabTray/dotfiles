@@ -10,16 +10,23 @@ alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias {btw,fetch}='fastfetch'
 # because i use arch, btw - one of the aliases is btw. btw.
+
 alias mkqvd='qemu-img create -f qcow2'
 # usage - also see https://www.youtube.com/watch?v=AAfFewePE7c
 # mkqvd <file_name> <disk_size>
 # file_name: the location of the virtual disk you would like to start from
 # disk_size: the largest possible amount of storage this virtual disk can take up. use M for megabytes, G for gigabytes, etc.
+
 alias qemu='qemu-system-x86_64 -enable-kvm -m 8G -drive'
 # usage - also see https://www.youtube.com/watch?v=AAfFewePE7c
 # qemu file=<filename> [-cdrom iso]
 # filename: the location of the virtual disk you would like to start from 
 # iso: an iso file, not a variable/option
+
+alias stowmusic='ln -s ~/Music/Bought-Individual/* ~/Music/MusicSquared/ && ln -s ~/Music/DL-Individual/* ~/Music/MusicSquared/'
+alias unstowmusic='rm ~/Music/MusicSquared/*'
+# maybe kinda dangerous that this is just a raw rm and not a bash script that checks to make sure these are actually symlinks, but it works for my use case and i make backups so its probably fine for now
+# inb4 i nuke everything in my music folder with the last backup being like a month ago watch me
 
 # appimages
 
