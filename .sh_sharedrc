@@ -11,6 +11,8 @@ alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias {btw,fetch}='fastfetch'
 # because i use arch, btw - one of the aliases is btw. btw.
+alias backup='sudo restic -r /mnt/External\ Backup/restic backup ~'
+alias snapshots='sudo restic -r /mnt/External\ Backup/restic snapshots'
 
 alias mkqvd='qemu-img create -f qcow2'
 # usage - also see https://www.youtube.com/watch?v=AAfFewePE7c
