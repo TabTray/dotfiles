@@ -1,24 +1,7 @@
 # TabTray's .files
 my Linux configuration files, shoved into a git repository for whenever i inevitably mess something up and need to look back on my decisions
 
-contains config files for:
-
-- bash
-- btop
-- fastfetch
-- foot
-- git
-- helix
-- hyprland
-- kitty
-- niri
-- rofi
-- sway
-- waybar
-- yt-dlp
-- zsh
-
-as well as some small shell scripts in .local/bin.
+this also contains some small shell scripts in .local/bin i made to automate some annoying things, but they suck really bad dont use them
 
 ## using
 
@@ -42,7 +25,7 @@ $ stow -D <REPO_DIRECTORY_LOCATION>
 
 ## couldn't include
 
-there are many configuration files that i would have included directly in this repo, but simply couldn't. these configurations will have to be set manually due to technical difficulties.
+unfortunately, some applications REALLY don't like symlinks and will do everything in their power to make you suffer if you use them, so these configurations will have to be set manually.
 
 ### kde plasma
 
@@ -60,8 +43,11 @@ ScrollFactor=3
 ```
 
 power management:
+
 when inactive = sleep after 15 min
+
 auto dim = 5 min
+
 turn off screen = 10 min | when locked = 1 min
 
 there are definitely more settings that i'm missing here but i'll add them as i go.
@@ -92,6 +78,7 @@ important plugins:
   + Notices
 - ShowMeYourName
 - SilentTyping
+  + Show Icon
 - ValidUser
 - ViewIcons
 - VolumeBooster
