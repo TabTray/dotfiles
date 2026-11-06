@@ -7,6 +7,9 @@ Rows=1
 [Effect-overview]
 BorderActivate=9
 
+[Effect-shakecursor]
+Magnification=10
+
 [Effect-wobblywindows]
 AdvancedMode=true
 Drag=100
@@ -40,9 +43,13 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Tiling][55c1ab0d-f563-4901-b1f4-b278cff0a33f][28a91433-0d4e-4615-a134-767fd9f25f52]
 padding=4
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.3730468749999959},{"width":0.3785156249999907},{"layoutDirection":"vertical","tiles":[{"height":0.34027777777777746},{"height":0.32013888888888864},{"height":0.3395833333333339}],"width":0.2484375000000134}]}
 
 [Tiling][55c1ab0d-f563-4901-b1f4-b278cff0a33f][a6f1657c-08d7-4144-bb85-ff527083fbf0]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][55c1ab0d-f563-4901-b1f4-b278cff0a33f][a8102186-6bda-45ca-8b25-378629d270c7]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -62,6 +69,10 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][91218611-14d0-4809-aef1-ce7828a72694][a6f1657c-08d7-4144-bb85-ff527083fbf0]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][91218611-14d0-4809-aef1-ce7828a72694][a8102186-6bda-45ca-8b25-378629d270c7]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
