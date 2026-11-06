@@ -33,7 +33,7 @@
   "display": {
     "stat": false,
     "pipe": false,
-    "showErrors": true,
+    "showErrors": false,
     "disableLinewrap": true,
     "hideCursor": false,
     "separator": " ",
