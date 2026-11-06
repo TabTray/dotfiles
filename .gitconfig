@@ -13,3 +13,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 # i didnt add this lfs stuff but if its what the build.sh wants then its what the build.sh gets
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	rt = remote
