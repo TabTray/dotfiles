@@ -29,7 +29,7 @@ input {
     }
 
     mouse {
-        accel-speed -0.45
+        accel-speed -0.6
         scroll-factor 3.5
     }
 
@@ -312,6 +312,8 @@ binds {
     // Running key programs: terminal, app launcher, screen locker.
     Mod+T repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Open Runner: rofi" { spawn "rofi" "-show" "drun"; }
+    Mod+Shift+T repeat=false hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
+    Mod+B repeat=false hotkey-overlay-title="Open a Web Browser: firefox" { spawn "firefox"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
