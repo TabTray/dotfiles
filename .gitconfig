@@ -19,3 +19,5 @@
 	br = branch
 	co = checkout
 	rt = remote
+[include]
+	path = ./.gitconfig.local
