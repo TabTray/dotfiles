@@ -1,17 +1,21 @@
 [Annotations]
-annotationToolType=3
+annotationToolType=7
+freehandStrokeColor=0,0,0
 freehandStrokeWidth=2
-rectangleStrokeColor=0,0,0,0
-rectangleStrokeWidth=0
+rectangleFillColor=255,0,0,0
+rectangleStrokeColor=255,0,0
+rectangleStrokeWidth=3
+textFont=Noto Sans,22,-1,0,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [General]
 autoSaveImage=true
 clipboardGroup=PostScreenshotCopyImage
+ocrLanguages=afr
 
 [ImageSave]
 imageFilenameTemplate=<yyyy>-<MM>-<dd> <HH>-<mm>-<ss>
 lastImageSaveAsLocation=file:///home/tabtray/Pictures/Screenshots/2026-07-28 13-19-57.png
-lastImageSaveLocation=file:///home/tabtray/Pictures/Screenshots/2026-08-31 01-08-45.png
+lastImageSaveLocation=file:///home/tabtray/Pictures/Screenshots/2026-11-09 20-38-05.png
 translatedScreenshotsFolder=Screenshots
 
 [VideoSave]
